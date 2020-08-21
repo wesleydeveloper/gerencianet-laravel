@@ -10,7 +10,7 @@
     }
   ],
   "require": {
-      "illuminate/support": "7.*",
+      "illuminate/support": "^6.2",
       "gerencianet/gerencianet-sdk-php": "2.*"
   },
     "autoload": {
