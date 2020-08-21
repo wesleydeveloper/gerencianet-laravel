@@ -1,0 +1,19 @@
+{
+  "name": "wesleydeveloper/gerencianet-laravel",
+  "description": "Gerencianet Package for Laravel",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Wesley Silva",
+      "email": "wesley_silva@outlook.com"
+    }
+  ],
+  "require": {
+      "illuminate/support": "7.*",
+      "gerencianet/gerencianet-sdk-php": "2.*"
+  },
+    "autoload": {
+        "Wesleydeveloper\\Gerencianet\\Laravel\\": "src/"
+    }
+}
