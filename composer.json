@@ -14,6 +14,8 @@
       "gerencianet/gerencianet-sdk-php": "2.*"
   },
     "autoload": {
-        "Wesleydeveloper\\Gerencianet\\Laravel\\": "src/"
+        "psr-4": {
+            "Wesleydeveloper\\Gerencianet\\Laravel\\": "src/"
+        }
     }
 }
