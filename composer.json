@@ -1,21 +1,45 @@
 {
-  "name": "wesleydeveloper/gerencianet-laravel",
-  "description": "Gerencianet Package for Laravel",
-  "minimum-stability": "dev",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Wesley Silva",
-      "email": "wesley_silva@outlook.com"
-    }
-  ],
-  "require": {
-      "illuminate/support": "^6.2",
-      "gerencianet/gerencianet-sdk-php": "2.*"
-  },
+    "name": "wesleydeveloper/gerencianet-laravel",
+    "description": "Gerencianet Package for Laravel",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Wesley Silva",
+            "email": "wesley_silva@outlook.com"
+        }
+    ],
+    "require": {
+        "illuminate/support": "^8.15",
+        "gerencianet/gerencianet-sdk-php": "^2.4.2"
+    },
     "autoload": {
         "psr-4": {
             "Wesleydeveloper\\Gerencianet\\Laravel\\": "src/"
         }
-    }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wesleydeveloper\\Gerencianet\\Laravel\\GerencianetServiceProvider"
+            ],
+            "aliases": {
+                "Gerencianet": "Wesleydeveloper\\Gerencianet\\Laravel\\Facades\\Gerencianet"
+            }
+        }
+    },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "gerencianet/gerencianet-sdk-php",
+                "version": "2.4.2",
+                "source": {
+                    "url": "https://github.com/wesleydeveloper/gn-api-sdk-php.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        }
+    ]
 }

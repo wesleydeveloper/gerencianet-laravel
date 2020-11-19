@@ -4,6 +4,7 @@
 namespace Wesleydeveloper\Gerencianet\Laravel;
 
 
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
 
 class GerencianetServiceProvider extends ServiceProvider
@@ -31,10 +32,10 @@ class GerencianetServiceProvider extends ServiceProvider
     {
         $this->app->bind('Wesleydeveloper\Gerencianet\Laravel\GerencianetManager', function () {
             return new GerencianetManager([
-                'client_id' => config('gerencianet.client_id'),
-                'client_secret' => config('gerencianet.client_secret'),
-                'sandbox' => config('gerencianet.sandbox'),
-                'timeout' => config('gerencianet.timeout'),
+                'client_id' => Config::get('gerencianet.client_id'),
+                'client_secret' => Config::get('gerencianet.client_secret'),
+                'sandbox' => Config::get('gerencianet.sandbox'),
+                'timeout' => Config::get('gerencianet.timeout'),
             ]);
         });
     }
